@@ -1,0 +1,270 @@
+$game-gray-light: #a5dad4;
+$main-gray-light: #95baa8;
+$main-gray-dark: #83aaa5;
+$title-color: #e55643;
+$menu-item: #2b9f5e;
+$shadow: #533d4a;
+$button-blue: #008cba;
+$company-logo: #55677b;
+$main-font-color: #333;
+$main-font: 'Lato', sans-serif;
+$title-font: 'Bangers', cursive;
+$title-font-alt: 'Spicy Rice', cursive;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  background-color: $main-gray-light;
+  font-family: $main-font;
+  color: $main-font-color;
+
+  .container {
+    margin: 1.5em auto;
+
+
+    h1.logo {
+      width: 95vw;
+      font-family: $title-font;
+      //font-size: 10em;
+      font-size: 12vw;
+      letter-spacing: 8px;
+      word-spacing: 16px;
+      text-align: center;
+      margin: 0 auto;
+      color: $title-color;
+      text-shadow: $shadow 1px 1px, $shadow 2px 2px, $shadow 3px 3px, $shadow 4px 4px;
+      transform: skew(-10deg);
+    }
+
+    nav {
+      margin-top: 4.5em;
+    }
+
+    nav ul {
+      text-align: center;
+    }
+
+    nav ul li {
+      list-style-type: none;
+      font-family: $title-font;
+      //font-size: 5em;
+      font-size: 8vw;
+      margin: .25em;
+      letter-spacing: 4px;
+      text-shadow: $shadow 1px 1px, $shadow 2px 2px, $shadow 3px 3px, $shadow 4px 4px;
+      
+      .link {
+        text-decoration: none;
+        color: $menu-item;
+        transition: all ease-in-out .15s;
+        cursor: pointer;
+
+        &:hover {
+          color: darken($menu-item, 10%);
+        }
+      }
+    }
+  }
+
+  .game {
+    position: relative;
+    background-color: $main-gray-light;
+
+    .bubble {
+      width: 80vw;
+      margin: 2em auto;
+      padding: .75em;
+      background-color: #fff;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+
+      .question {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+          text-align: center;
+          margin: 2em 0;
+        }
+
+        .answers {
+          display: flex;
+          flex-direction: column;
+          margin: 0 2em;
+
+          span {
+            margin-bottom: 5px;
+            padding: 5px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+              background-color: darken(#eee, 10%);
+            }
+
+            label {
+              padding-left: 15px;
+              display: inline-block;
+              flex: 1;
+            }
+          }
+
+          span, label, input[type='radio'] {
+            cursor:pointer;
+          }
+        }
+      }
+
+    }
+
+    .summary {
+      width: 80vw;
+      margin: 2em auto;
+      text-align: center;
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+
+      h2 {
+        margin: 1em 0;
+      }
+
+      .sumbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 300px;
+
+        h1, button {
+          margin-bottom: 10px;
+        }
+      }
+
+      table {
+        border-collapse: collapse;
+        margin-bottom: 5px;
+
+        th {
+          padding: 10px 5px;
+          background-color: #e0e0e0;
+        }
+
+        td {
+          padding: 5px;
+          text-align: left;
+        }
+      }
+
+      table, th, td {
+        width: 100%;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      background-color: $company-logo;
+      color: #fff;
+      border: none;
+      padding: .5em 1em;
+      margin: 1em auto;
+      transition: all ease-in-out .15s;
+      font-size: 1.25em;
+
+      &:hover {
+        background-color: darken($button-blue, 20%);
+      }
+
+      a.link {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+
+  .form-page {
+    position: relative;
+    //width: 500px;
+    margin: 2em 5vw;
+    display: flex;
+    flex-direction: column;
+
+    .question-form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+
+      input, textarea, [type=submit] {
+        font-family: $main-font;
+        color: $main-font-color;
+        padding: 10px;
+        font-size: 1.5em;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      [type=submit] {
+        background-color: $company-logo;
+        color: #fff;
+        border: none;
+        transition: all ease-in-out .15s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($button-blue, 20%);
+        }
+      }
+    }
+
+    button.return {
+      width: 25%;
+      margin: 20px 0;
+      cursor: pointer;
+      background-color: $company-logo;
+      color: #fff;
+      border: none;
+      padding: 5px;
+      transition: all ease-in-out .15s;
+      font-size: 1.5em;
+
+      &:hover {
+        background-color: darken($button-blue, 20%);
+      }
+
+      a.link {
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        width: 100%;
+      }
+    }
+
+    .submitted {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: lightgreen;
+
+      h3 {
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+  }
+
+}

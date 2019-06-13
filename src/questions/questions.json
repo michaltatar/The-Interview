@@ -1,0 +1,44 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "content": "Choose a primitive data type",
+      "a": "array",
+      "b": "boolean",
+      "c": "object",
+      "correct": "b"
+    },
+    {
+      "id": 2,
+      "content": "Where do you place JavaScript in HTML?",
+      "a": "In the <body> section",
+      "b": "In the <head> section",
+      "c": "In the <head> or the <body> section",
+      "correct": "c"
+    },
+    {
+      "id": 3,
+      "content": "What is the scope of the let variable?",
+      "a": "global",
+      "b": "function",
+      "c": "block",
+      "correct": "c"
+    },
+    {
+      "id": 4,
+      "content": "How to create an arrow function in JavaScript?",
+      "a": "const myFunction = () => {}",
+      "b": "function myFunction = () => {}",
+      "c": "function myFunction() => {}",
+      "correct": "a"
+    },
+    {
+      "id": 5,
+      "content": "How change an inline style using JavaScript?",
+      "a": "element.style.color=\"red\"",
+      "b": "element.css('color', 'red')",
+      "c": "element.style(color: {red})",
+      "correct": "a"
+    }
+  ]
+}
